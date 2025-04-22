@@ -36,10 +36,9 @@ const Contact = () => {
     };
 
     const socialLinks = [
-        { id: 1, icon: <FaGithub size={25} />, url: 'https://github.com/malharmahanor', label: 'GitHub' },
-        { id: 2, icon: <FaLinkedin size={25} />, url: 'https://linkedin.com/in/malhar-mahanor', label: 'LinkedIn' },
-        { id: 3, icon: <FaTwitter size={25} />, url: 'https://twitter.com/malharmahanor', label: 'Twitter' },
-        { id: 4, icon: <FaEnvelope size={25} />, url: 'mailto:malhar.mahanor@example.com', label: 'Email' }
+        { id: 1, icon: <FaGithub />, url: 'https://github.com/mxm-1x', label: 'GitHub' },
+        { id: 2, icon: <FaLinkedin />, url: 'https://www.linkedin.com/in/malharmahanwar/', label: 'LinkedIn' },
+        { id: 3, icon: <FaEnvelope />, url: 'mailto:malharmahanor@gmail.com', label: 'Email' }
     ];
 
     return (
@@ -52,7 +51,6 @@ const Contact = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    style={{ width: '100%' }}
                 >
                     <form ref={formRef} onSubmit={handleSubmit} className="async-function">
                         <div className="variable-declaration">
@@ -66,7 +64,6 @@ const Contact = () => {
                                 required
                                 className="string-literal"
                                 placeholder="'Your Name'"
-                                style={{ fontSize: 'clamp(0.9rem, 4vw, 1rem)' }}
                             />
                         </div>
 
@@ -81,7 +78,6 @@ const Contact = () => {
                                 required
                                 className="string-literal"
                                 placeholder="'your.email@example.com'"
-                                style={{ fontSize: 'clamp(0.9rem, 4vw, 1rem)' }}
                             />
                         </div>
 
@@ -94,9 +90,8 @@ const Contact = () => {
                                 onChange={handleChange}
                                 required
                                 className="template-literal"
-                                placeholder={"`Your message here...`"}
+                                placeholder="`Your message here...`"
                                 rows="5"
-                                style={{ fontSize: 'clamp(0.9rem, 4vw, 1rem)' }}
                             />
                         </div>
 
@@ -104,7 +99,6 @@ const Contact = () => {
                             type="submit"
                             className="callback-function"
                             disabled={isSubmitting}
-                            style={{ fontSize: 'clamp(0.9rem, 4vw, 1rem)' }}
                         >
                             {isSubmitting ? 'await sendMessage()...' : 'sendMessage()'}
                         </button>
@@ -127,9 +121,8 @@ const Contact = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
-                    style={{ width: '100%' }}
                 >
-                    <h3 className="export-default" style={{ fontSize: 'clamp(1rem, 5vw, 1.2rem)' }}>module.exports = &#123;</h3>
+                    <h3 className="export-default">module.exports = {`{`}</h3>
                     <div className="module-exports">
                         {socialLinks.map((link) => (
                             <motion.a
@@ -140,13 +133,12 @@ const Contact = () => {
                                 className="exported-property"
                                 whileHover={{ scale: 1.1 }}
                                 transition={{ duration: 0.2 }}
-                                style={{ fontSize: 'clamp(0.9rem, 4vw, 1rem)' }}
                             >
                                 <span className="property-name">{link.label}:</span> {link.icon}
                             </motion.a>
                         ))}
                     </div>
-                    <h3 className="export-default" style={{ fontSize: 'clamp(1rem, 5vw, 1.2rem)' }}>&#125;</h3>
+                    <h3 className="export-default">{`}`}</h3>
                 </motion.div>
             </div>
         </section>

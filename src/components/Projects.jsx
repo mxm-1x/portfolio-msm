@@ -6,30 +6,30 @@ const Projects = () => {
     const projects = [
         {
             id: 1,
-            title: 'Portfolio Website',
-            description: 'A personal portfolio website built with React and Framer Motion. Features responsive design and smooth animations.',
-            tags: ['React', 'Framer Motion', 'CSS'],
-            github: 'https://github.com/yourusername/portfolio',
-            demo: 'https://yourportfolio.com',
-            image: 'https://via.placeholder.com/600x300/0a192f/64ffda?text=Portfolio+Website'
+            title: 'Habit Tracker',
+            description: `Tech Stacks: React JS, Tailwind, Redux Toolkit. 
+            Description: Add habits, tap ➕ daily, and watch your streaks grow. Stay consistent and turn actions into lasting habits! 
+            Features: Custom Habits, Dark Mode,`,
+            tags: ['React', 'Redux', 'CSS'],
+            github: 'https://github.com/mxm-1x/habitTrackerRedux',
+            demo: 'https://habit-app-tracker.netlify.app/',
         },
         {
             id: 2,
-            title: 'Task Manager',
-            description: 'A full-stack task management application with user authentication, task creation, and categorization features.',
-            tags: ['React', 'Node.js', 'MongoDB'],
+            title: 'SkyFy',
+            description: 'Tech Stacks: React-Native, Axios, Maps. Description: Track the ISS in real-time and stay updated on the 5 closest meteors approaching Earth. With live updates and stunning visuals, explore space like never before. Never miss a meteor sighting or ISS flyover again!',
+            tags: ['React-Native', 'Api', 'maps'],
             github: 'https://github.com/yourusername/task-manager',
-            demo: 'https://yourtaskmanager.com',
-            image: 'https://via.placeholder.com/600x300/0a192f/64ffda?text=Task+Manager'
+            demo: 'https://snack.expo.dev/@malharms/iss?platform=android',
+            image: 'https://snack.expo.dev/@malharms/iss?platform=android'
         },
         {
             id: 3,
-            title: 'Weather App',
-            description: 'A weather application that shows current weather and forecasts based on user location or search.',
-            tags: ['JavaScript', 'API', 'CSS'],
-            github: 'https://github.com/yourusername/weather-app',
-            demo: 'https://yourweatherapp.com',
-            image: 'https://via.placeholder.com/600x300/0a192f/64ffda?text=Weather+App'
+            title: 'Movie App',
+            description: 'Teck Stacks: Html, CSS, Javascript. Features: search movies, Ratings, description. Description: Dive into the world of movies with this sleek app, where you can read reviews, see rating of films, create by a film aficionados. It’s your all-in-one platform for movie insights on the go!',
+            tags: ['JavaScript', "html", 'API', 'CSS'],
+            github: 'https://github.com/mxm-1x/Movie-Review-App-',
+            demo: 'https://zippy-clafoutis-cecefc.netlify.app/',
         },
         {
             id: 4,
@@ -55,47 +55,29 @@ const Projects = () => {
                         transition={{ duration: 0.5, delay: project.id * 0.2 }}
                     >
                         <div className="git-commit">
-                            <picture>
-                                <source
-                                    media="(max-width: 576px)"
-                                    srcSet={`https://via.placeholder.com/400x200/0a192f/64ffda?text=${project.title.replace(/\s+/g, '+')}`}
-                                />
-                                <img
-                                    src={project.image}
-                                    alt={project.title}
-                                    className="repo-image"
-                                    style={{
-                                        width: '100%',
-                                        borderRadius: '4px',
-                                        marginBottom: '1rem',
-                                        maxHeight: '300px',
-                                        objectFit: 'cover'
-                                    }}
-                                />
-                            </picture>
+                            {/* <img
+                                src={project.image}
+                                alt={project.title}
+                                className="repo-image"
+                                style={{ width: '100%', borderRadius: '4px', marginBottom: '1rem' }}
+                            /> */}
 
                             <div className="commit-message">
-                                <h3 style={{ fontSize: 'clamp(1.2rem, 5vw, 1.8rem)' }}>{project.title}</h3>
-                                <p style={{ fontSize: 'clamp(0.9rem, 4vw, 1rem)' }}>{project.description}</p>
+                                <h3>{project.title}</h3>
+                                <p>{project.description}</p>
 
                                 <div className="dependency-list">
                                     {project.tags.map((tag, index) => (
-                                        <span
-                                            key={index}
-                                            className="npm-package"
-                                            style={{ fontSize: 'clamp(0.7rem, 3vw, 0.8rem)' }}
-                                        >
-                                            {tag}
-                                        </span>
+                                        <span key={index} className="npm-package">{tag}</span>
                                     ))}
                                 </div>
 
                                 <div className="merge-actions">
                                     <a href={project.github} target="_blank" rel="noopener noreferrer" className="pull-request">
-                                        <FaGithub /> <span>Code</span>
+                                        <FaGithub /> Code
                                     </a>
                                     <a href={project.demo} target="_blank" rel="noopener noreferrer" className="fork">
-                                        <FaExternalLinkAlt /> <span>Demo</span>
+                                        <FaExternalLinkAlt /> Demo
                                     </a>
                                 </div>
                             </div>

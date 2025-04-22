@@ -14,11 +14,10 @@ const Skills = () => {
         { id: 7, icon: <FaGit size={40} />, name: 'Git', color: '#F1502F' },
         { id: 8, icon: <FaFigma size={40} />, name: 'Figma', color: '#F24E1E' },
         { id: 9, icon: <FaPython size={40} />, name: 'Python', color: '#306998' },
-        { id: 10, icon: <SiPandas size={40} />, name: 'Pandas', color: '#fff' },
+        { id: 10, icon: <SiPandas size={40} />, name: 'Pandas', color: '#150458' },
         { id: 11, icon: <SiTailwindcss size={40} />, name: 'Tailwind CSS', color: '#38B2AC' },
         { id: 12, icon: <SiTypescript size={40} />, name: 'TypeScript', color: '#007ACC' },
-        { id: 13, icon: <SiFirebase size={40} />, name: 'Firebase', color: '#FFCA28' },
-        { id: 14, icon: <SiCanva size={40} />, name: 'Canva', color: '#00C4CC' },
+        { id: 13, icon: <SiFirebase size={40} />, name: 'Firebase', color: '#FFCA28' }
     ];
 
     return (
@@ -35,10 +34,8 @@ const Skills = () => {
                             transition={{ duration: 0.3, delay: skill.id * 0.05 }}
                             style={{ color: skill.color }}
                         >
-                            <div className="skill-icon" style={{ fontSize: 'clamp(1.5rem, 5vw, 2.5rem)' }}>
-                                {skill.icon}
-                            </div>
-                            <p style={{ fontSize: 'clamp(0.8rem, 3vw, 1rem)' }}>{skill.name}</p>
+                            <div className="skill-icon">{skill.icon}</div>
+                            <p>{skill.name}</p>
                         </motion.div>
                     ))}
                 </div>
