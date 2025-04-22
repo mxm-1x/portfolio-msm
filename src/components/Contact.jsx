@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -122,7 +122,7 @@ const Contact = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                 >
-                    <h3 className="export-default">module.exports = {`{`}</h3>
+                    <h3 className="export-default">module.exports = {"{"}</h3>
                     <div className="module-exports">
                         {socialLinks.map((link) => (
                             <motion.a
@@ -138,7 +138,7 @@ const Contact = () => {
                             </motion.a>
                         ))}
                     </div>
-                    <h3 className="export-default">{`}`}</h3>
+                    <h3 className="export-default">{"}"}</h3>
                 </motion.div>
             </div>
         </section>
